@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Angela’s Secret | Luxury Beauty & Sleepwear</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Angela’s Secret is a luxury boutique offering skincare, designer perfumes, jewelry, and elegant sleepwear inspired by femininity and self-care.">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let item = cart.find(p => p.name === name);
+
+  if (item) {
+    item.qty += 1;
+  } else {
+    cart.push({ name: name, price: price, qty: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(name + " added to cart!");
+}
+</script>
+
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <h1 class="logo">
+      <a href="index.html">Angela’s Secret</a>
+    </h1>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart_checkout.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Luxury Beauty. Soft Confidence.</h2>
+      <p>Curated skincare, signature perfumes, jewelry, and elegant sleepwear.</p>
+    </div>
+  </section>
+</header>
+
+<main>
+
+  <!-- WELCOME SECTION -->
+  <section class="welcome-section">
+    <h2>Welcome, beautiful Angel! 🦋</h2>
+    <p>
+      Angela's Secret is a boutique-style online store celebrating femininity,
+      self-care, and confidence through curated skincare, sleepwear, fragrances,
+      and accessories. Every product is chosen with love to help you feel radiant,
+      comfortable, and empowered.
+    </p>
+  </section>
+
+ <!-- FEATURED COLLECTIONS -->
+<section class="featured-section">
+  <h2 class="section-title">Featured Collections</h2>
+
+  <div class="featured-row">
+
+    <!-- Skincare -->
+    <article class="featured-card">
+      <a href="shop.html#skincare">
+        <img src="images/skincare/besoma1.jpg" alt="Skincare Essentials">
+        <h3>Skincare</h3>
+        <p>Nourishing formulas designed to restore and glow.</p>
+      </a>
+    </article>
+
+    <!-- Perfume -->
+    <article class="featured-card">
+      <a href="shop.html#perfume">
+        <img src="images/perfume/prada1.jpg" alt="Designer Perfumes">
+        <h3>Designer Perfumes</h3>
+        <p>Signature scents that linger with elegance.</p>
+      </a>
+    </article>
+
+    <!-- Sleepwear -->
+    <article class="featured-card">
+      <a href="shop.html#sleepwear">
+        <img src="images/sleepwear/pinkpjs1.jpg" alt="Luxury Sleepwear">
+        <h3>Sleepwear</h3>
+        <p>Soft, feminine pieces made for comfort and beauty.</p>
+      </a>
+    </article>
+
+    <!-- Jewelry -->
+    <article class="featured-card">
+      <a href="shop.html#jewelry">
+        <img src="images/jewelry/set6.jpg" alt="Luxury Jewelry">
+        <h3>Jewelry</h3>
+        <p>Delicate pieces to elevate every moment.</p>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+</main>
+<!-- BEST SELLERS -->
+<section class="best-sellers">
+  <h2 class="section-title">Best Sellers</h2>
+
+  <div class="best-sellers-grid">
+
+    <!-- Product 1 -->
+    <article class="product-card">
+      <img src="images/skincare/drspiller1.1.jpg" alt="Dr. Spiller Skincare Pack">
+      <h3>Dr. Spiller Skincare Pack</h3>
+      <p class="price">$129.00</p>
+      <button class="add-to-cart"
+        onclick="addToCart('YSL Libre Perfume', 120)">
+        Add to Cart
+      </button>
+    </article>
+
+    </article>
+
+    <!-- Product 2 -->
+    <article class="product-card">
+      <img src="images/perfume/ysl1.2.jpg" alt="YSL Libre Perfume">
+      <h3>YSL Libre Perfume</h3>
+      <p class="price">$98.00</p>
+      <button class="add-to-cart"
+        onclick="addToCart('YSL Libre Perfume', 120)">
+        Add to Cart
+      </button>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="product-card">
+      <img src="images/jewelry/set1.jpg" alt="Angela's Pink Heart Set">
+      <h3>Angela's Pink Heart Set</h3>
+      <p class="price">$45.00</p>
+      <button class="add-to-cart"
+        onclick="addToCart('YSL Libre Perfume', 120)">
+        Add to Cart
+      </button>
+    </article>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+
+    <!-- LEFT: CONTACT (CLICKABLE) -->
+    <div class="footer-left">
+      <h4>
+        <a href="contact.html">Contact</a>
+      </h4>
+      <p>
+        📧 <a href="mailto:angelassecretshop@gmail.com">
+          angelassecretshop@gmail.com
+        </a>
+      </p>
+      <p>📞 (857) 123-345</p>
+      <p>Mon–Fri: 9am–6pm EST</p>
+    </div>
+
+    <!-- CENTER: CUSTOMER CARE (CLICKABLE) -->
+    <div class="footer-center">
+  <h4>
+    <a href="services.html">Customer Care</a>
+  </h4>
+  <ul>
+    <li><a href="services.html#shipping">Shipping Info</a></li>
+    <li><a href="services.html#returns">Returns</a></li>
+    <li><a href="services.html#support">Support</a></li>
+  </ul>
+</div>
+
+    <!-- RIGHT: BRAND -->
+    <div class="footer-right">
+      <h4>
+        <a href="index.html">Angela’s Secret</a>
+      </h4>
+      <p>Celebrating femininity, self-care, and confidence.</p>
+    </div>
+
+  </div>
+
+  <p class="footer-copy">&copy; 2025 Angela’s Secret</p>
+</footer>
